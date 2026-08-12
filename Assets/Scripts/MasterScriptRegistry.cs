@@ -22,7 +22,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchWeatherManager.cs",
         "MatchLoadoutDropManager.cs",
         "MatchPingSystemManager.cs",
-        "MatchVehicleTelemetryManager.cs"
+        "MatchVehicleTelemetryManager.cs",
+        "MatchClanSquadManager.cs"
     };
 
     void Start()
