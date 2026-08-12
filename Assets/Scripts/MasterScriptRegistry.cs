@@ -60,7 +60,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchPingTelemetryManager.cs",
         "MatchSessionReportManager.cs",
         "MatchUINotificationManager.cs",
-        "MatchVoiceChatManager.cs"
+        "MatchVoiceChatManager.cs",
+        "MatchLoadingDirector.cs"
     };
 
     void Start()
