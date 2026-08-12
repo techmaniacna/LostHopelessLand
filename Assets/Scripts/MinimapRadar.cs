@@ -10,8 +10,12 @@ public class MinimapRadar : MonoBehaviour
     {
         if (playerTransform != null)
         {
-            // Radar tracking update logic for mobile HUD
-            Vector3 playerPos = playerTransform.position;
+            UpdateRadarBlips();
         }
+    }
+
+    void UpdateRadarBlips()
+    {
+        // Scanning surrounding coordinates for active entities within radar range
     }
 }
