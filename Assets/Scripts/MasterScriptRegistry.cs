@@ -19,7 +19,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchEndgameDirector.cs",
         "MatchReplayRecorder.cs",
         "MatchTutorialInjector.cs",
-        "MatchWeatherManager.cs"
+        "MatchWeatherManager.cs",
+        "MatchLoadoutDropManager.cs"
     };
 
     void Start()
