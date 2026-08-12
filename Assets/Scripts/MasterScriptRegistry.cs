@@ -23,7 +23,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchLoadoutDropManager.cs",
         "MatchPingSystemManager.cs",
         "MatchVehicleTelemetryManager.cs",
-        "MatchClanSquadManager.cs"
+        "MatchClanSquadManager.cs",
+        "MatchEmoteSelectorManager.cs"
     };
 
     void Start()
