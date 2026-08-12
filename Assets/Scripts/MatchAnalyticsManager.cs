@@ -3,18 +3,18 @@ using UnityEngine;
 public class MatchAnalyticsManager : MonoBehaviour
 {
     [Header("Match Telemetry")]
-    public float survivalTimeSeconds = 0f;
-    public float totalDamageDealt = 0f;
-    public float shootingAccuracy = 0.0f;
+    public float survivalTime = 0f;
+    public int shotsFired = 0;
+    public int enemiesEliminated = 0;
 
     void Update()
     {
-        survivalTimeSeconds += Time.deltaTime;
+        survivalTime += Time.deltaTime;
     }
 
-    public void RecordDamage(float damage)
+    public void RecordKill()
     {
-        totalDamageDealt += damage;
-        Debug.Log("Damage recorded: " + damage + " | Total: " + totalDamageDealt);
+        enemiesEliminated++;
+        Debug.Log("Analytics: Elimination recorded. Total kills: " + enemiesEliminated);
     }
 }
