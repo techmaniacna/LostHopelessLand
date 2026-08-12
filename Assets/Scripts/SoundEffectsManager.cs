@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class SoundEffectsManager : MonoBehaviour
 {
-    [Header("Audio SFX")]
-    public float sfxVolume = 1f;
+    [Header("Audio Settings")]
+    public float sfxVolume = 1.0f;
 
-    public void PlaySoundEffect(string soundName)
+    public void PlaySoundEffect(string clipName)
     {
-        Debug.Log("Playing SFX: " + soundName + " at volume: " + sfxVolume);
+        Debug.Log("Playing SFX: " + clipName + " at volume " + sfxVolume);
     }
 }
