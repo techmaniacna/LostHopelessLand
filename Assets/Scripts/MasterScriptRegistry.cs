@@ -43,7 +43,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchClanWarManager.cs",
         "MatchVipEconomyManager.cs",
         "MatchWeaponControllerManager.cs",
-        "MatchCraftingManager.cs"
+        "MatchCraftingManager.cs",
+        "MatchPerkTreeManager.cs"
     };
 
     void Start()
