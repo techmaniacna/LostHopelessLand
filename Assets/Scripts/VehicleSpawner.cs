@@ -2,24 +2,16 @@ using UnityEngine;
 
 public class VehicleSpawner : MonoBehaviour
 {
-    [Header("Vehicle Spawning")]
-    public GameObject vehiclePrefab;
-    public Transform[] spawnPoints;
+    [Header("Spawner Settings")]
+    public string vehiclePrefabName = "Buggy";
+    public bool hasSpawned = false;
 
-    void Start()
+    public void SpawnVehicle()
     {
-        SpawnVehicles();
-    }
-
-    void SpawnVehicles()
-    {
-        foreach (Transform spawnPoint in spawnPoints)
+        if (!hasSpawned)
         {
-            if (vehiclePrefab != null && spawnPoint != null)
-            {
-                Instantiate(vehiclePrefab, spawnPoint.position, spawnPoint.rotation);
-                Debug.Log("Spawned vehicle at designated point.");
-            }
+            hasSpawned = true;
+            Debug.Log("Spawning vehicle: " + vehiclePrefabName + " at coordinates.");
         }
     }
 }
