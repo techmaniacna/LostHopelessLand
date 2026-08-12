@@ -12,7 +12,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "GameInitializer.cs",
         "MatchSessionDirector.cs",
         "MatchHUDController.cs",
-        "MatchAnalyticsReporter.cs"
+        "MatchAnalyticsReporter.cs",
+        "MatchAudioDirector.cs"
     };
 
     void Start()
