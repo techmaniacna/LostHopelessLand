@@ -44,7 +44,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchVipEconomyManager.cs",
         "MatchWeaponControllerManager.cs",
         "MatchCraftingManager.cs",
-        "MatchPerkTreeManager.cs"
+        "MatchPerkTreeManager.cs",
+        "MatchEventManager.cs"
     };
 
     void Start()
