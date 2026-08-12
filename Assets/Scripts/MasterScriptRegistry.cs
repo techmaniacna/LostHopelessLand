@@ -14,7 +14,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchHUDController.cs",
         "MatchAnalyticsReporter.cs",
         "MatchAudioDirector.cs",
-        "MatchSecurityValidator.cs"
+        "MatchSecurityValidator.cs",
+        "MatchNetworkSyncManager.cs"
     };
 
     void Start()
