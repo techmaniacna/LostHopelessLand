@@ -34,7 +34,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchSocialInviteManager.cs",
         "MatchSafeZoneManager.cs",
         "MatchAirdropLootManager.cs",
-        "MatchAntiCheatTelemetryManager.cs"
+        "MatchAntiCheatTelemetryManager.cs",
+        "MatchProfileStatsManager.cs"
     };
 
     void Start()
