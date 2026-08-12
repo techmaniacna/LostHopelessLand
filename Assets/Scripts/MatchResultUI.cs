@@ -2,26 +2,15 @@ using UnityEngine;
 
 public class MatchResultUI : MonoBehaviour
 {
-    [Header("Match Stats")]
-    public int finalRank = 1;
-    public int totalKills = 5;
-    public bool isVictory = false;
+    [Header("Endgame Results")]
+    public string matchOutcome = "Victory";
+    public int finalScore = 1500;
+    public int xpAwarded = 250;
 
-    void Start()
+    public void DisplayMatchResults(string outcome, int score)
     {
-        DisplayMatchResults();
-    }
-
-    void DisplayMatchResults()
-    {
-        if (finalRank == 1)
-        {
-            isVictory = true;
-            Debug.Log("VICTORY ROYALE! Rank: #" + finalRank + " | Kills: " + totalKills);
-        }
-        else
-        {
-            Debug.Log("MATCH OVER. Rank: #" + finalRank + " | Kills: " + totalKills);
-        }
+        matchOutcome = outcome;
+        finalScore = score;
+        Debug.Log("Match Over! Outcome: " + matchOutcome + " | Score: " + finalScore + " | XP Gained: " + xpAwarded);
     }
 }
