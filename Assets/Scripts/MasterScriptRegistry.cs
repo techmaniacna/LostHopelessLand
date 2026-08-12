@@ -17,7 +17,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchSecurityValidator.cs",
         "MatchNetworkSyncManager.cs",
         "MatchEndgameDirector.cs",
-        "MatchReplayRecorder.cs"
+        "MatchReplayRecorder.cs",
+        "MatchTutorialInjector.cs"
     };
 
     void Start()
