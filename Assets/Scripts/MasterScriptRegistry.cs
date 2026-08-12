@@ -13,7 +13,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchSessionDirector.cs",
         "MatchHUDController.cs",
         "MatchAnalyticsReporter.cs",
-        "MatchAudioDirector.cs"
+        "MatchAudioDirector.cs",
+        "MatchSecurityValidator.cs"
     };
 
     void Start()
