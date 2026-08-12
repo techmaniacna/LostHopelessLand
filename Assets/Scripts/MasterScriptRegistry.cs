@@ -56,7 +56,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchPerkTreeProgressionManager.cs",
         "MatchClanWarSystemManager.cs",
         "MatchVIPEconomyManager.cs",
-        "MatchmakingQueueManager.cs"
+        "MatchmakingQueueManager.cs",
+        "MatchPingTelemetryManager.cs"
     };
 
     void Start()
