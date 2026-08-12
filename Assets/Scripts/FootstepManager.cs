@@ -2,25 +2,14 @@ using UnityEngine;
 
 public class FootstepManager : MonoBehaviour
 {
-    [Header("Footstep Properties")]
+    [Header("Surface Audio Settings")]
+    public string currentSurface = "Concrete";
     public float stepInterval = 0.5f;
     private float stepTimer = 0f;
 
-    void Update()
+    public void TriggerFootstep(string surfaceType)
     {
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-        {
-            stepTimer += Time.deltaTime;
-            if (stepTimer >= stepInterval)
-            {
-                PlayFootstepSound();
-                stepTimer = 0f;
-            }
-        }
-    }
-
-    void PlayFootstepSound()
-    {
-        Debug.Log("Playing tactical footstep audio effect.");
+        currentSurface = surfaceType;
+        Debug.Log("Playing footstep sound for surface: " + currentSurface);
     }
 }
