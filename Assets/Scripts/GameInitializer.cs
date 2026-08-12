@@ -3,18 +3,20 @@ using UnityEngine;
 public class GameInitializer : MonoBehaviour
 {
     [Header("Initialization Settings")]
-    public bool initializeOnStart = true;
+    public string gameVersion = "1.0.0";
+    public bool isInitialized = false;
 
-    void Start()
+    void Awake()
     {
-        if (initializeOnStart)
-        {
-            InitializeGameSystems();
-        }
+        InitializeGameSystems();
     }
 
     void InitializeGameSystems()
     {
-        Debug.Log("LostHopelessLand core systems successfully loaded and initialized.");
+        if (!isInitialized)
+        {
+            isInitialized = true;
+            Debug.Log("Lost Hopeless Land - Version " + gameVersion + " initialized successfully.");
+        }
     }
 }
