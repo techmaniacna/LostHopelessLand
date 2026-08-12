@@ -2,17 +2,21 @@ using UnityEngine;
 
 public class VehicleEntry : MonoBehaviour
 {
-    [Header("Vehicle Status")]
+    [Header("Vehicle States")]
     public bool isOccupied = false;
-    public string driverName = "";
+    public string currentDriver = "";
 
     public void EnterVehicle(string playerName)
     {
         if (!isOccupied)
         {
             isOccupied = true;
-            driverName = playerName;
-            Debug.Log(playerName + " entered vehicle: " + gameObject.name);
+            currentDriver = playerName;
+            Debug.Log(playerName + " entered the vehicle.");
+        }
+        else
+        {
+            Debug.Log("Vehicle is already occupied!");
         }
     }
 
@@ -20,9 +24,9 @@ public class VehicleEntry : MonoBehaviour
     {
         if (isOccupied)
         {
-            Debug.Log(driverName + " exited vehicle: " + gameObject.name);
+            Debug.Log(currentDriver + " exited the vehicle.");
             isOccupied = false;
-            driverName = "";
+            currentDriver = "";
         }
     }
 }
