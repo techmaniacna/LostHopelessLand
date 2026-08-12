@@ -61,7 +61,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchSessionReportManager.cs",
         "MatchUINotificationManager.cs",
         "MatchVoiceChatManager.cs",
-        "MatchLoadingDirector.cs"
+        "MatchLoadingDirector.cs",
+        "MatchPartyInviteManager.cs"
     };
 
     void Start()
