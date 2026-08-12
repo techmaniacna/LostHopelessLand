@@ -30,7 +30,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchAudioEqualizerManager.cs",
         "MatchVisualEffectsManager.cs",
         "MatchDailyRewardManager.cs",
-        "MatchQuestMissionManager.cs"
+        "MatchQuestMissionManager.cs",
+        "MatchSocialInviteManager.cs"
     };
 
     void Start()
