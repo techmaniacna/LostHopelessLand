@@ -2,31 +2,19 @@ using UnityEngine;
 
 public class VehicleEntry : MonoBehaviour
 {
-    [Header("Vehicle States")]
+    [Header("Vehicle Interaction")]
+    public string vehicleName = "Armored UAZ";
     public bool isOccupied = false;
-    public string currentDriver = "";
 
-    public void EnterVehicle(string playerName)
+    public void EnterVehicle()
     {
-        if (!isOccupied)
-        {
-            isOccupied = true;
-            currentDriver = playerName;
-            Debug.Log(playerName + " entered the vehicle.");
-        }
-        else
-        {
-            Debug.Log("Vehicle is already occupied!");
-        }
+        isOccupied = true;
+        Debug.Log("Player entered vehicle: " + vehicleName);
     }
 
     public void ExitVehicle()
     {
-        if (isOccupied)
-        {
-            Debug.Log(currentDriver + " exited the vehicle.");
-            isOccupied = false;
-            currentDriver = "";
-        }
+        isOccupied = false;
+        Debug.Log("Player exited vehicle: " + vehicleName);
     }
 }
