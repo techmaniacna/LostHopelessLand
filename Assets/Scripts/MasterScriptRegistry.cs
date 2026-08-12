@@ -29,7 +29,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchCrosshairManager.cs",
         "MatchAudioEqualizerManager.cs",
         "MatchVisualEffectsManager.cs",
-        "MatchDailyRewardManager.cs"
+        "MatchDailyRewardManager.cs",
+        "MatchQuestMissionManager.cs"
     };
 
     void Start()
