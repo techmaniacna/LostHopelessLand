@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class MatchStoreManager : MonoBehaviour
 {
-    [Header("Match Currency & Economy")]
-    public int matchCoins = 0; // Earned via kills (150 per kill)
-    public int coinsPerKill = 150;
+    [Header("Match Currency & Economy (Balanced)")]
+    public int matchCoins = 0; 
+    public int coinsPerKill = 150; // Exactly 150 coins per kill
 
-    [Header("Revival System Settings")]
+    [Header("Revival System Settings (10-Min Limit)")]
     public float matchElapsedTime = 0.0f;
-    public float revivalTimeLimit = 600.0f; // 10 minutes in seconds
-    public int revivalCost = 600; // Cost to revive a teammate
+    public float revivalTimeLimit = 600.0f; // Strict 10-minute window (600 seconds)
+    public int revivalCost = 600; // Exactly 4 kills (600 coins) per teammate revival
 
     [Header("In-Game Store Inventory")]
     public string rareGunItem = "Rare Tactical SMG";
@@ -19,7 +19,6 @@ public class MatchStoreManager : MonoBehaviour
 
     void Update()
     {
-        // Track match time for the 10-minute revival restriction
         if (matchElapsedTime < revivalTimeLimit)
         {
             matchElapsedTime += Time.deltaTime;
@@ -37,31 +36,18 @@ public class MatchStoreManager : MonoBehaviour
     {
         if (matchElapsedTime > revivalTimeLimit)
         {
-            Debug.LogWarning("[REVIVAL FAILED] The 10-minute revival window has closed. Teammates cannot be revived anymore!");
+            Debug.LogWarning("[REVIVAL LOCKED] The 10-minute revival window has closed. No more respawns!");
             return;
         }
 
         if (matchCoins >= revivalCost)
         {
             matchCoins -= revivalCost;
-            Debug.Log("[REVIVAL SUCCESS] Teammate " + teammateName + " has been called back into action! Remaining coins: " + matchCoins);
+            Debug.Log("[REVIVAL SUCCESS] Teammate " + teammateName + " redeployed! Remaining coins: " + matchCoins);
         }
         else
         {
-            Debug.LogWarning("[REVIVAL FAILED] Not enough match coins! Need " + revivalCost + " coins to revive.");
-        }
-    }
-
-    public void BuyStoreItem(string itemName, int price)
-    {
-        if (matchCoins >= price)
-        {
-            matchCoins -= price;
-            Debug.Log("[STORE] Purchased " + itemName + " successfully! Remaining coins: " + matchCoins);
-        }
-        else
-        {
-            Debug.LogWarning("[STORE] Purchase failed for " + itemName + ". Insufficient match coins.");
+            Debug.LogWarning("[REVIVAL FAILED] Need " + revivalCost + " coins (4 kills) to revive.");
         }
     }
 }
