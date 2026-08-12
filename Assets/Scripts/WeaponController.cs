@@ -4,11 +4,9 @@ public class WeaponController : MonoBehaviour
 {
     [Header("Weapon Stats")]
     public string weaponName = "Assault Rifle";
-    public int damage = 30;
     public int currentAmmo = 30;
-    public int maxAmmo = 30;
+    public int maxMagazine = 30;
     public float fireRate = 0.15f;
-
     private float nextFireTime = 0f;
 
     public void Shoot()
@@ -17,7 +15,7 @@ public class WeaponController : MonoBehaviour
         {
             nextFireTime = Time.time + fireRate;
             currentAmmo--;
-            Debug.Log("Fired " + weaponName + ". Ammo left: " + currentAmmo);
+            Debug.Log(weaponName + " fired! Ammo remaining: " + currentAmmo + "/" + maxMagazine);
         }
         else if (currentAmmo <= 0)
         {
@@ -27,7 +25,7 @@ public class WeaponController : MonoBehaviour
 
     public void Reload()
     {
-        currentAmmo = maxAmmo;
-        Debug.Log("Reloaded " + weaponName + ". Ammo full: " + currentAmmo);
+        currentAmmo = maxMagazine;
+        Debug.Log(weaponName + " reloaded. Ammo full: " + currentAmmo);
     }
 }
