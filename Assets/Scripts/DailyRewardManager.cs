@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class DailyRewardManager : MonoBehaviour
 {
-    [Header("Reward Properties")]
-    public int currentLoginStreak = 1;
-    public bool rewardClaimedToday = false;
+    [Header("Login Streak")]
+    public int currentStreakDay = 1;
+    public bool hasClaimedToday = false;
 
     public void ClaimDailyReward()
     {
-        if (!rewardClaimedToday)
+        if (!hasClaimedToday)
         {
-            rewardClaimedToday = true;
-            Debug.Log("Daily reward claimed for streak day: " + currentLoginStreak);
+            hasClaimedToday = true;
+            Debug.Log("Claimed reward for Day " + currentStreakDay);
         }
         else
         {
-            Debug.Log("Reward already claimed for today. Come back tomorrow!");
+            Debug.Log("Daily reward already claimed today.");
         }
     }
 }
