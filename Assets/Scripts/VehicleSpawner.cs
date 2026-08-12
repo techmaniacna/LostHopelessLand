@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class VehicleSpawner : MonoBehaviour
 {
-    [Header("Spawner Settings")]
-    public string vehiclePrefabName = "Buggy";
-    public bool hasSpawned = false;
+    [Header("Spawner Configuration")]
+    public string spawnPointName = "Highway Spawn 01";
+    public bool isVehicleSpawned = true;
 
-    public void SpawnVehicle()
+    public void RespawnVehicle()
     {
-        if (!hasSpawned)
-        {
-            hasSpawned = true;
-            Debug.Log("Spawning vehicle: " + vehiclePrefabName + " at coordinates.");
-        }
+        isVehicleSpawned = true;
+        Debug.Log("New vehicle spawned at " + spawnPointName);
     }
 }
