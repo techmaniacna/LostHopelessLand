@@ -26,7 +26,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchClanSquadManager.cs",
         "MatchEmoteSelectorManager.cs",
         "MatchSpectatorModeManager.cs",
-        "MatchCrosshairManager.cs"
+        "MatchCrosshairManager.cs",
+        "MatchAudioEqualizerManager.cs"
     };
 
     void Start()
