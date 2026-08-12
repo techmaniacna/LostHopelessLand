@@ -53,7 +53,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchEventBroadcasterManager.cs",
         "MatchHighlightRecorderManager.cs",
         "MatchLoadoutPresetsManager.cs",
-        "MatchPerkTreeProgressionManager.cs"
+        "MatchPerkTreeProgressionManager.cs",
+        "MatchClanWarSystemManager.cs"
     };
 
     void Start()
