@@ -46,7 +46,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchCraftingManager.cs",
         "MatchPerkTreeManager.cs",
         "MatchEventManager.cs",
-        "MatchSoundFXManager.cs"
+        "MatchSoundFXManager.cs",
+        "MatchVFXManager.cs"
     };
 
     void Start()
