@@ -31,7 +31,8 @@ public class MasterScriptRegistry : MonoBehaviour
         "MatchVisualEffectsManager.cs",
         "MatchDailyRewardManager.cs",
         "MatchQuestMissionManager.cs",
-        "MatchSocialInviteManager.cs"
+        "MatchSocialInviteManager.cs",
+        "MatchSafeZoneManager.cs"
     };
 
     void Start()
